@@ -1,0 +1,24 @@
+{
+  "name": "smartshift-ai",
+  "version": "0.1.0",
+  "private": true,
+  "description": "SmartShift AI - Intelligent Workforce Scheduling Platform",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspaces --if-present",
+    "build": "npm run build --workspaces --if-present",
+    "lint": "npm run lint --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present",
+    "dev:api": "npm run dev -w apps/api",
+    "dev:web": "npm run dev -w apps/web",
+    "dev:mobile": "npm run dev -w apps/mobile",
+    "seed:admin": "npm run seed:admin -w apps/api",
+    "seed:personnel": "npm run seed:personnel -w apps/api"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
